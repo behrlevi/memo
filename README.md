@@ -20,6 +20,6 @@ How to install docker on RHEL:
 
 How to remove all docker containers:
 
-  docker stop "$(docker ps -a -q)"
+  1. docker stop "$(docker ps -a -q)"
   
-  docker rm "$(docker ps -a -q)"
+  2. docker rm "$(docker ps -a -q)"
