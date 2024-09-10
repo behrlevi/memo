@@ -26,5 +26,5 @@ How to remove all docker containers:
 
 How to mount SMB share on Linux:
 
-  sudo mount -t cifs -o username=your_username,password=your_password //server_address/share_name /mnt/smbshare
+  1. sudo mount -t cifs -o username=your_username,password=your_password //server_address/share_name /mnt/smbshare
 
