@@ -23,3 +23,8 @@ How to remove all docker containers:
   1. docker stop "$(docker ps -a -q)"
   
   2. docker rm "$(docker ps -a -q)"
+
+How to mount SMB share on Linux:
+
+  sudo mount -t cifs -o username=your_username,password=your_password //server_address/share_name /mnt/smbshare
+
