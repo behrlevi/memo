@@ -28,3 +28,40 @@ How to mount SMB share on Linux:
 
   1. sudo mount -t cifs -o username=your_username,password=your_password //server_address/share_name /mnt/smbshare
 
+Ubuntu Server static network config
+  /etc/netplan/01-netcfg.yaml
+
+  network:
+  version: 2
+  ethernets:
+    ens3:
+      dhcp4: no
+      addresses:
+        - 192.168.1.100/24
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+          
+sudo netplan generate
+sudo netplan apply
+
+
+S T O R K
+U B U N T U
+
+curl -1sLf 'https://dl.cloudsmith.io/public/isc/stork/cfg/setup/bash.deb.sh' | sudo bash
+
+apt install isc-stork-server
+
+apt install postgresql
+
+su postgres
+
+stork-tool db-create --db-name stork --db-user stork
+
+
+ezekhez a parancsokhoz létre kellett hozni egy stork nevű felhasználót a Linuxban:
+stork-tool db-init
+stork-tool db-up
