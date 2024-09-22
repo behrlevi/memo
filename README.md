@@ -1,4 +1,4 @@
-# How to expand LVM volume with XFS:
+## How to expand LVM volume with XFS:
 
   1. identify the the disk with lsblk
   2. resize the partition with fdsisk
@@ -9,7 +9,7 @@
   4. extend the logical volume: lvextend -l +100%FREE /dev/mapper/vgngmae-lvname
   5. resize the file system: xfs_growfs /mount/point
 
-# How to install docker on RHEL:
+## How to install docker on RHEL:
 
   1. Remove conflicting packages: dnf remove -y podman buildah
   2. add docker repo: dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
@@ -18,18 +18,18 @@
   5. (OPTIONAL) add user to docker group -no need to sudo: sudo usermod -aG docker $USER newgrp docker
   6. test docker: docker run hello-world
 
-# How to remove all docker containers:
+## How to remove all docker containers:
 
   1. docker stop "$(docker ps -a -q)"
   
   2. docker rm "$(docker ps -a -q)"
 
-# How to mount SMB share on Linux:
+## How to mount SMB share on Linux:
 
   1. sudo mount -t cifs -o username=your_username,password=your_password //server_address/share_name /mnt/smbshare
 
 
-# Ubuntu Server static network config
+## Ubuntu Server static network config
 
     /etc/netplan/01-netcfg.yaml
 ```
@@ -50,9 +50,9 @@
     sudo netplan apply
 ```
 
-# Stork
+## Stork
 
-## Ubuntu
+### Ubuntu
 ```
 curl -1sLf 'https://dl.cloudsmith.io/public/isc/stork/cfg/setup/bash.deb.sh' | sudo bash
 
@@ -67,5 +67,11 @@ stork-tool db-create --db-name stork --db-user stork
 
 ezekhez a parancsokhoz létre kellett hozni egy stork nevű felhasználót a Linuxban:
 stork-tool db-init
+
 stork-tool db-up
 ```
+### Stork agent
+
+   curl -1sLf 'https://dl.cloudsmith.io/public/isc/stork/cfg/setup/bash.deb.sh' | sudo bash
+   
+   apt install isc-stork-agent
