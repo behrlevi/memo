@@ -53,7 +53,7 @@
 # Stork
 
 ## Ubuntu
-
+```
 curl -1sLf 'https://dl.cloudsmith.io/public/isc/stork/cfg/setup/bash.deb.sh' | sudo bash
 
 apt install isc-stork-server
@@ -68,3 +68,4 @@ stork-tool db-create --db-name stork --db-user stork
 ezekhez a parancsokhoz létre kellett hozni egy stork nevű felhasználót a Linuxban:
 stork-tool db-init
 stork-tool db-up
+```
