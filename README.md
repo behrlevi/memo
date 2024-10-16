@@ -40,7 +40,7 @@ faillog --user username --reset
 ## How to mount SMB share on Linux:
 
   1. sudo mount -t cifs -o username=your_username,password=your_password //server_address/share_name /mnt/smbshare
-  PERMANENT
+  2. PERMANENT
   ```
   sudo apt-get install cifs-utils
   //server/share /pathto/mountpoint cifs credentials=/home/username/.smbcredentials,uid=shareuser,gid=sharegroup 0 0
