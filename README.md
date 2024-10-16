@@ -9,6 +9,10 @@
   4. extend the logical volume: lvextend -l +100%FREE /dev/mapper/vgngmae-lvname
   5. resize the file system: xfs_growfs /mount/point
 
+## Unlock a user after failed SSH login attempts:
+
+faillog --user <username> --reset
+
 ## How to install docker on RHEL:
 
   1. Remove conflicting packages: dnf remove -y podman buildah
