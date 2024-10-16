@@ -25,7 +25,7 @@
   3. Add the Docker repository to APT sources: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
   4. Update the package list again: sudo apt-get update
   5. Install Docker CE (Community Edition): sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-  6. Verify Docker installation: sudo docker run
+  6. Verify Docker installation: sudo docker run hello-world
 
 ## How to remove all docker containers:
 
