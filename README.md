@@ -53,6 +53,11 @@ faillog --user username --reset
   ```
   Create the .smbcredentials file in your home directory:
   ```
+  username=shareuser
+  password=sharepassword
+  domain=domain_or_workgroupname
+  ```
+  ```
   chmod 0600 ~/.smbcredentials
   ```
   ```
