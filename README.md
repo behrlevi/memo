@@ -11,7 +11,7 @@
 
 ## Unlock a user after failed SSH login attempts:
 
-faillog --user <username> --reset
+faillog --user username --reset
 
 ## How to install docker on RHEL:
 
