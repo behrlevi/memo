@@ -24,13 +24,30 @@ faillog --user username --reset
 
 ## How to install docker on Ubuntu:
 
-  1. Install dependencies: sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-  2. Add Docker’s GPG key: curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-  3. Add the Docker repository to APT sources: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-  4. Update the package list again: sudo apt-get update
-  5. Install Docker CE (Community Edition): sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-  6. Verify Docker installation: sudo docker run hello-world
-
+  1. Install dependencies:
+ ```
+  sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+ ```
+  3. Add Docker’s GPG key:
+  ```
+  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+  ```
+  5. Add the Docker repository to APT sources:
+  ```  
+  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+  ```
+  8. Update the package list again:
+  ```
+  sudo apt-get update
+  ```
+  10. Install Docker CE (Community Edition):
+  ```
+  sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+  ```
+  12. Verify Docker installation:
+  ```
+  sudo docker run hello-world
+  ```
 ## How to remove all docker containers:
 
   1. docker stop "$(docker ps -a -q)"
