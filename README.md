@@ -68,6 +68,8 @@ faillog --user username --reset
 ## How to remove all docker containers:
 ```
 docker stop "$(docker ps -a -q)"
+```
+```
 docker rm "$(docker ps -a -q)"
 ```
 ## How to mount SMB share on Linux:
