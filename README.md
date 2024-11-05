@@ -15,45 +15,61 @@ faillog --user username --reset
 
 ## How to install docker on RHEL:
 
-  1. Remove conflicting packages: dnf remove -y podman buildah
-  2. add docker repo: dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
-  3. install docker: dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-  4. start & enable the service: systemctl start docker | systemctl enable docker
-  5. (OPTIONAL) add user to docker group -no need to sudo: sudo usermod -aG docker $USER newgrp docker
-  6. test docker: docker run hello-world
-
+  1. Remove conflicting packages:
+  ```
+  dnf remove -y podman buildah
+  ```
+  2. add docker repo:
+  ```
+  dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+  ```
+  3. install docker:
+  ```
+  dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  ```
+  4. start & enable the service:
+  ```
+  systemctl start docker | systemctl enable docker
+  ```
+  5. (OPTIONAL) add user to docker group -no need to sudo:
+  ```
+  sudo usermod -aG docker $USER newgrp docker
+  ```
+  6. test docker:
+  ```
+  docker run hello-world
+  ```
 ## How to install docker on Ubuntu:
 
   1. Install dependencies:
  ```
   sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
  ```
-  3. Add Docker’s GPG key:
+  2. Add Docker’s GPG key:
   ```
   curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
   ```
-  5. Add the Docker repository to APT sources:
+  3. Add the Docker repository to APT sources:
   ```  
   sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
   ```
-  8. Update the package list again:
+  4. Update the package list again:
   ```
   sudo apt-get update
   ```
-  10. Install Docker CE (Community Edition):
+  5. Install Docker CE (Community Edition):
   ```
   sudo apt-get install -y docker-ce docker-ce-cli containerd.io
   ```
-  12. Verify Docker installation:
+  6. Verify Docker installation:
   ```
   sudo docker run hello-world
   ```
 ## How to remove all docker containers:
-
-  1. docker stop "$(docker ps -a -q)"
-  
-  2. docker rm "$(docker ps -a -q)"
-
+```
+docker stop "$(docker ps -a -q)"
+docker rm "$(docker ps -a -q)"
+```
 ## How to mount SMB share on Linux:
 
   1. Temporary
