@@ -36,7 +36,17 @@ openssl x0509 -in cert.pem -noout -text | less
 The config file is in /etc/ssl. Directory names must match the config.
 
 Firefox requires a SAN (Subject Alternative Name) to be present in the certificates.
+
 [Custom openssl config file](custom_openssl.cnf)
+
+Generate the signing request
+```
+openssl req -new -key server.key -out server.csr -config server_cert.cnf
+```
+Generate the cert
+```
+openssl x509 -req -days 365 -in server.csr -CA /root/tls/certs/cacert.pem -CAkey /root/tls/private/cakey.pem -CAcreateserial -out server.crt -extensions req_ext -extfile server_cert.cnf
+```
      
 ## How to expand LVM volume with XFS:
 
