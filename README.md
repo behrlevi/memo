@@ -22,6 +22,12 @@ Create an SSL certificate for a website
      ```
      openssl ca -days 1095 -notext -md sha256 -keyfile example.com_key.pem -in example.com_csr.pem -out example.pem
      ```
+
+To view the contents of a certificate
+```
+openssl x0509 -in cert.pem -noout -text | less
+
+```
      
 ## How to expand LVM volume with XFS:
 
