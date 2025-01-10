@@ -18,7 +18,11 @@ Create an SSL certificate for a website
      ```
      openssl req -new -sha256 -key example_key.pem -out example_csr.pem
      ```
-
+  2. Sign the certificate
+     ```
+     openssl ca -days 1095 -notext -md sha256 -keyfile example_key.pem -in example_csr.pem -out example.pem
+     ```
+     
 ## How to expand LVM volume with XFS:
 
   1. identify the the disk with lsblk
