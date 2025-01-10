@@ -12,15 +12,15 @@ Create a CA
 Create an SSL certificate for a website
   1. Generate a private key
      ```
-     openssl genrsa -aes256 -out example_key.pem 4096
+     openssl genrsa -aes256 -out example.com_key.pem 4096
      ```
   2. Generate a certificate signing request
      ```
-     openssl req -new -sha256 -key example_key.pem -out example_csr.pem
+     openssl req -new -sha256 -key example.com_key.pem -out example.com_csr.pem
      ```
   2. Sign the certificate
      ```
-     openssl ca -days 1095 -notext -md sha256 -keyfile example_key.pem -in example_csr.pem -out example.pem
+     openssl ca -days 1095 -notext -md sha256 -keyfile example.com_key.pem -in example.com_csr.pem -out example.pem
      ```
      
 ## How to expand LVM volume with XFS:
