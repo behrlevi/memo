@@ -24,6 +24,11 @@ Create an SSL certificate for a web server
      openssl ca -days 1095 -notext -md sha256 -keyfile private/cakey.pem -cert cacert.pem -in example.com_csr.pem -out example_cert.pem
      ```
 
+Alternatively to generate the key and a cert at the same time
+```
+openssl req -new -newkey rsa:2048 -nodes -keyout key.pem -out csr.pem
+```
+
 To view the contents of a certificate
 ```
 openssl x0509 -in cert.pem -noout -text | less
