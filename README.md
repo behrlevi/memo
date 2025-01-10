@@ -1,3 +1,24 @@
+## PKI Infrastructure
+
+Create a CA
+  1. Generate a private key for the CA
+     ```
+     openssl genrsa -aes256 -out private/cakey.pem 4096
+     ```
+  2. Generate a certificate signing request for the CA (public key)
+     ```
+      openssl req -x509 -new -key private/cakey.pem -days 1095 -sha256 -extensions v3_ca -out cacert.pem
+     ```
+Create an SSL certificate for a website
+  1. Generate a private key
+     ```
+     openssl genrsa -aes256 -out example_key.pem 4096
+     ```
+  2. Generate a certificate signing request
+     ```
+     openssl req -new -sha256 -key example_key.pem -out example_csr.pem
+     ```
+
 ## How to expand LVM volume with XFS:
 
   1. identify the the disk with lsblk
