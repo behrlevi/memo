@@ -21,7 +21,7 @@ Create an SSL certificate for a web server
      ```
   2. Sign the certificate
      ```
-     openssl ca -days 1095 -notext -md sha256 -keyfile example.com_key.pem -in example.com_csr.pem -out example.pem
+     openssl ca -days 1095 -notext -md sha256 -keyfile private/cakey.pem -cert cacert.pem -in example.com_csr.pem -out example_cert.pem
      ```
 
 To view the contents of a certificate
