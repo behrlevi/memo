@@ -34,6 +34,9 @@ To view the contents of a certificate
 openssl x0509 -in cert.pem -noout -text | less
 ```
 The config file is in /etc/ssl. Directory names must match the config.
+
+Firefox requires a SAN (Subject Alternative Name) to be present in the certificates.
+[Custom openssl config file](custom_openssl.cnf)
      
 ## How to expand LVM volume with XFS:
 
