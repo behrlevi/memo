@@ -9,7 +9,7 @@ Create a CA
      ```
       openssl req -x509 -new -key private/cakey.pem -days 1095 -sha256 -extensions v3_ca -out cacert.pem
      ```
-Create an SSL certificate for a website
+Create an SSL certificate for a web server
   1. Generate a private key
      ```
      openssl genrsa -aes256 -out example.com_key.pem 4096
@@ -19,6 +19,7 @@ Create an SSL certificate for a website
      openssl req -new -sha256 -key example.com_key.pem -out example.com_csr.pem
      ```
   2. Sign the certificate
+     (The Common Name/FQDN mus exactly match the websites URL to work)
      ```
      openssl ca -days 1095 -notext -md sha256 -keyfile example.com_key.pem -in example.com_csr.pem -out example.pem
      ```
@@ -26,8 +27,8 @@ Create an SSL certificate for a website
 To view the contents of a certificate
 ```
 openssl x0509 -in cert.pem -noout -text | less
-
 ```
+The config file is in /etc/ssl. Directory names must match the config.
      
 ## How to expand LVM volume with XFS:
 
