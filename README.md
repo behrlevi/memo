@@ -41,7 +41,7 @@ Firefox requires a SAN (Subject Alternative Name) to be present in the certifica
 
 Both the IP and the DNS should be present in the config)
 
-Generate the private key (better not use a passphrase because it won't work some servers)
+Generate the private key (better not to use a passphrase because it won't work on some servers)
 ```
 openssl genrsa -out server.key 4096
 ```
