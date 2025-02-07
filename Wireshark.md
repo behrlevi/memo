@@ -51,3 +51,18 @@ Search a value or field inside of a specific scope/range.
 Convert a non-string value to a string.
 
     string(frame.number) matches "[13579]$"
+
+## DNS
+
+Investigate suspicious DNS traffic
+
+    dns contains "dnscat"
+    dns contains "dns2tcp"
+
+    dns.qry.name.len > 15 and !mdns
+
+## ICMP
+
+ICMP is used to encapsulate tunnelling payloads
+
+    data.len > 64 and icmp
