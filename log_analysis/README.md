@@ -1,4 +1,4 @@
-Log processing:
+### Log processing: ###
   1. Source identification
   
   2. Log collection (rsyslog)
