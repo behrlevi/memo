@@ -47,3 +47,28 @@ Security
     1100: Logging service disabled.
     1102: Log deletion.
     1116: Malware detection.
+
+### Linux logs requiring binaries to view
+
+
+Failed logins only
+        /var/log/faillog
+
+    faillog
+
+	
+ Active login records
+        /var/log/wtmp
+
+    who
+
+Last logins
+        /var/log/lastlog
+
+    lastlog
+
+	
+ Kernel ring buffer logs
+        /var/log/dmesg
+
+    dmesg
