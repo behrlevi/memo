@@ -203,3 +203,6 @@ stork-tool db-up
    curl -1sLf 'https://dl.cloudsmith.io/public/isc/stork/cfg/setup/bash.deb.sh' | sudo bash
    
    apt install isc-stork-agent
+
+
+    while true; do echo -e "\033[32m$(tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' < /dev/urandom | head -c $(tput cols))"; sleep 0.1; done
