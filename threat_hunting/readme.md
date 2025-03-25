@@ -14,3 +14,9 @@
 | **Privilege Escalation** | • Look for unusual SYSTEM account processes spawned by a low-privileged user.<br>• Hunt for potential service permission abuses via service binary modification.<br>• Utilise the parent-child relationship of processes, including the context of the user who spawned it. |
 | **Credential Access** | • Hunt for known indicators that are associated with LSASS credential dumping.<br>• Monitor events related to domain controller data replication.<br>• Seek patterns of numerous failed login attempts to Windows hosts, followed by successful authentication.<br>• Observe unusual process creation activities of potentially compromised accounts. |
 | **Lateral Movement** | • Hunt for unusual process creations made by WmiPrvSE.exe.<br>• Look for suspicious successful authentication patterns that may indicate a potential Pass-the-Hash activity.<br>• Observe unusual process creation activities after detecting a successful lateral movement attempt.<br>• Correlate the source of the lateral movement attempt and investigate how the source was compromised. |
+
+| Tactic | Hunting Methodology |
+|--------|---------------------|
+| **Collection** | • Implement baselining and monitor file changes.<br>• Monitor network traffic data spikes and anomalies.<br>• Monitor driver installations.<br>• Monitor process and registry activities. |
+| **Exfiltration** | • Monitor command executions.<br>• Monitor file access.<br>• Monitor network traffic data. |
+| **Impact** | • Monitor command executions.<br>• Monitor file modification and deletion.<br>• Monitor snapshot, volume, drive and image load, access and deletion.<br>• Monitor AS API execution. |
