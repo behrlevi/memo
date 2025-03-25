@@ -15,7 +15,7 @@ Create an SSL certificate for a web server
      openssl genrsa -aes256 -out example.com_key.pem 4096
      ```
   2. Generate a certificate signing request
-    (The Common Name/FQDN mus exactly match the websites URL for this to work)
+    (The Common Name/FQDN must exactly match the websites URL for this to work)
      ```
      openssl req -new -sha256 -key example.com_key.pem -out example.com_csr.pem
      ```
