@@ -28,3 +28,14 @@
 6. Monitor and Evaluate
 
    Continuously test and monitor the effectiveness of the implemented countermeasures and evaluate the success of the threat modelling exercise. An example of a simple measurement of success is tracking the identified risks that have been effectively mitigated or eliminated.
+
+### The STRIDE framework
+
+| Category | Definition | Policy Violated |
+|:---------|:-----------|:----------------|
+| Spoofing | Unauthorised access or impersonation of a user or system. | Authentication |
+| Tampering | Unauthorised modification or manipulation of data or code. | Integrity |
+| Repudiation | Ability to deny having acted, typically due to insufficient auditing or logging. | Non-repudiation |
+| Information Disclosure | Unauthorised access to sensitive information, such as personal or financial data. | Confidentiality |
+| Denial of Service | Disruption of the system's availability, preventing legitimate users from accessing it. | Availability |
+| Elevation of Privilege | Unauthorised elevation of access privileges, allowing threat actors to perform unintended actions. | Authorisation |
