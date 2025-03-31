@@ -91,3 +91,13 @@
 
    - Assess the likelihood and impact of each identified threat and prioritise risks based on their overall severity.
    - Determine the most effective and cost-efficient countermeasures for the identified risks, considering the organisation's risk tolerance and security objectives.
+
+### The DREAD framework
+  
+| DREAD | Definition |
+|-------|------------|
+| Damage | The potential harm that could result from the successful exploitation of a vulnerability. This includes data loss, system downtime, or reputational damage. |
+| Reproducibility | The ease with which an attacker can successfully recreate the exploitation of a vulnerability. A higher reproducibility score suggests that the vulnerability is straightforward to abuse, posing a greater risk. |
+| Exploitability | The difficulty level involved in exploiting the vulnerability considering factors such as technical skills required, availability of tools or exploits, and the amount of time it would take to exploit the vulnerability successfully. |
+| Affected Users | The number or portion of users impacted once the vulnerability has been exploited. |
+| Discoverability | The ease with which an attacker can find and identify the vulnerability considering whether it is publicly known or how difficult it is to discover based on the exposure of the assets (publicly reachable or in a regulated environment). |
