@@ -39,3 +39,34 @@
 | Information Disclosure | Unauthorised access to sensitive information, such as personal or financial data. | Confidentiality |
 | Denial of Service | Disruption of the system's availability, preventing legitimate users from accessing it. | Availability |
 | Elevation of Privilege | Unauthorised elevation of access privileges, allowing threat actors to perform unintended actions. | Authorisation |
+
+
+### The PASTA (Process for Attack Simulation and Threat Analysis) framework
+
+1. Define the Objectives
+
+    Establish the scope of the threat modelling exercise by identifying the systems, applications, or networks being analysed and the specific security objectives and compliance requirements to be met.
+
+2. Define the Technical Scope
+
+    Create an inventory of assets, such as hardware, software, and data, and develop a clear understanding of the system's architecture, dependencies, and data flows.
+
+3. Decompose the Application
+
+    Break down the system into its components, identifying entry points, trust boundaries, and potential attack surfaces. This step also includes mapping out data flows and understanding user roles and privileges within the system.
+
+4. Analyse the Threats 
+
+    Identify potential threats to the system by considering various threat sources, such as external attackers, insider threats, and accidental exposures. This step often involves leveraging industry-standard threat classification frameworks or attack libraries.
+
+5. Vulnerabilities and Weaknesses Analysis
+
+    Analyse the system for existing vulnerabilities, such as misconfigurations, software bugs, or unpatched systems, that an attacker could exploit to achieve their objectives. Vulnerability assessment tools and techniques, such as static and dynamic code analysis or penetration testing, can be employed during this step.
+
+6. Analyse the Attacks
+
+    Simulate potential attack scenarios and evaluate the likelihood and impact of each threat. This step helps determine the risk level associated with each identified threat, allowing security teams to prioritise the most significant risks.
+
+7. Risk and Impact Analysis
+
+    Develop and implement appropriate security controls and countermeasures to address the identified risks, such as updating software, applying patches, or implementing access controls. The chosen countermeasures should be aligned with the organisation's risk tolerance and security objectives.
