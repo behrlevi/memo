@@ -101,3 +101,12 @@
 | Exploitability | The difficulty level involved in exploiting the vulnerability considering factors such as technical skills required, availability of tools or exploits, and the amount of time it would take to exploit the vulnerability successfully. |
 | Affected Users | The number or portion of users impacted once the vulnerability has been exploited. |
 | Discoverability | The ease with which an attacker can find and identify the vulnerability considering whether it is publicly known or how difficult it is to discover based on the exposure of the assets (publicly reachable or in a regulated environment). |
+
+### Comparison
+
+| Framework | Use Case Applications |
+|-----------|----------------------|
+| MITRE ATT&CK | Unlike DREAD and STRIDE, which focus more on potential risks and vulnerabilities, ATT&CK provides a practical and hands-on approach by mapping adversary tactics.<br><br>• Assess the effectiveness of existing controls against known attack techniques used by threat actors. |
+| DREAD | DREAD offers a more numerical and calculated approach to threat analysis than STRIDE or MITRE ATT&CK, making it excellent for clearly prioritising threats.<br><br>• Qualitatively assess the potential risks associated with specific threats.<br>• Prioritise risk mitigation based on the collective score produced by each DREAD component. |
+| STRIDE | While other frameworks like MITRE ATT&CK focus on real-world adversary tactics, STRIDE shines in its structure and methodology, allowing for a systematic review of threats specific to software systems.<br><br>• Analyse and categorise threats in software systems.<br>• Identify potential vulnerabilities in system components based on the six STRIDE threat categories.<br>• Implement appropriate security controls to mitigate specific threat types. |
+| PASTA | Excellent for aligning threat modelling with business objectives. Unlike other frameworks, PASTA integrates business context, making it a more holistic and adaptable choice for organisations.<br><br>• Conduct risk-centric threat modelling exercises aligned with business objectives.<br>• Prioritise threats based on their potential impact and risk level to the organisation.<br>• Build a flexible methodology that can be adapted to different organisational contexts. |
